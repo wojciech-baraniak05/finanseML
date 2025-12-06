@@ -1,0 +1,2833 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Raport Eksploracyjny Danych</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+        .summary {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .warning {
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-left: 4px solid #e74c3c;
+            margin: 10px 0;
+        }
+        .success {
+            background-color: #e6ffe6;
+            padding: 10px;
+            border-left: 4px solid #27ae60;
+            margin: 10px 0;
+        }
+        .timestamp {
+            color: #7f8c8d;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 RAPORT EKSPLORACYJNY DANYCH</h1>
+    <div class="timestamp">Wygenerowano: 2025-12-06 11:46:53</div>
+    
+    <h2>📌 Ogólne Informacje</h2>
+    <div class="summary">
+        <p><strong>Liczba wierszy:</strong> 3,000</p>
+        <p><strong>Liczba kolumn:</strong> 220</p>
+        <p><strong>Kolumny numeryczne:</strong> 217</p>
+        <p><strong>Kolumny kategoryczne:</strong> 2</p>
+    </div>
+    
+    <h2>🔢 Typy Danych</h2>
+    <table>
+        <tr>
+            <th>Kolumna</th>
+            <th>Typ danych</th>
+        </tr>
+        <tr><td>szczegolnaFormaPrawna_Symbol</td><td>int64</td></tr>
+        <tr><td>formaWlasnosci_Symbol</td><td>int64</td></tr>
+        <tr><td>pkdKod</td><td>int64</td></tr>
+        <tr><td>wsk_liczba_dni_istnienia</td><td>int64</td></tr>
+        <tr><td>Aktywa</td><td>float64</td></tr>
+        <tr><td>Aktywa_trwale</td><td>float64</td></tr>
+        <tr><td>Wartosci_niematerialne_prawne</td><td>float64</td></tr>
+        <tr><td>Wartosc_firmy</td><td>float64</td></tr>
+        <tr><td>Rzeczowe_aktywa_trwale</td><td>float64</td></tr>
+        <tr><td>Srodki_trwale</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dlugoterminowe</td><td>float64</td></tr>
+        <tr><td>Inwestycje_dlugoterminowe</td><td>float64</td></tr>
+        <tr><td>Rozliczenia_miedzyokresowe_dlugie</td><td>float64</td></tr>
+        <tr><td>Aktywa_obrotowe</td><td>float64</td></tr>
+        <tr><td>Zapasy</td><td>float64</td></tr>
+        <tr><td>Naleznosci_krotkoterminowe</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m_powiazane</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m_powiazane</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m_kapitale</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m_kapitale</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m_pozostale</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m_pozostale</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pozostale_sadowe</td><td>float64</td></tr>
+        <tr><td>Inwestycje_krotkoterminowe</td><td>float64</td></tr>
+        <tr><td>Srodki_pieniezne</td><td>float64</td></tr>
+        <tr><td>Rozliczenia_miedzyokresowe_krotkie</td><td>float64</td></tr>
+        <tr><td>Kapital_wlasny</td><td>float64</td></tr>
+        <tr><td>Kapital_podstawowy</td><td>float64</td></tr>
+        <tr><td>Kapital_zapasowy</td><td>float64</td></tr>
+        <tr><td>Zysk_netto</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_rezerwy</td><td>float64</td></tr>
+        <tr><td>Rezerwy_na_zobowiazania</td><td>float64</td></tr>
+        <tr><td>Rezerwa_z_tytulu_odroczonego_podatku_dochodowego</td><td>float64</td></tr>
+        <tr><td>Rezerwa_na_swiadczenia_emerytalne</td><td>float64</td></tr>
+        <tr><td>Rezerwa_na_swiadczenia_emerytalne_dlugie</td><td>float64</td></tr>
+        <tr><td>Rezerwa_na_swiadczenia_emerytalne_krotkie</td><td>float64</td></tr>
+        <tr><td>Pozostale_rezerwy</td><td>float64</td></tr>
+        <tr><td>Pozostale_rezerwy_krotkie</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dlugoterminowe</td><td>float64</td></tr>
+        <tr><td>Kredyty_pozyczki_dlugie</td><td>float64</td></tr>
+        <tr><td>Inne_zobowiazania_fin_dlugoterminowe</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_krotkoterminowe</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m_powiazane</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m_powiazane</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m_kapitale</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m_kapitale</td><td>float64</td></tr>
+        <tr><td>Kredyty_pozyczki_krotkie</td><td>float64</td></tr>
+        <tr><td>Inne_zobowiazania_fin_krotkoterminowe</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m_pozostale</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m_pozostale</td><td>float64</td></tr>
+        <tr><td>Rozliczenia_miedzyokresowe_b</td><td>float64</td></tr>
+        <tr><td>Ujemna_wartosc_firmy</td><td>float64</td></tr>
+        <tr><td>Inne_rozliczenia_miedzyokresowe</td><td>float64</td></tr>
+        <tr><td>Inne_rozliczenia_miedzyokresowe_dlugie</td><td>float64</td></tr>
+        <tr><td>Inne_rozliczenia_miedzyokresowe_krotkie</td><td>float64</td></tr>
+        <tr><td>schemat_wsk_bilans</td><td>object</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m</td><td>float64</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m</td><td>float64</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m</td><td>float64</td></tr>
+        <tr><td>Kredyty_pozyczki</td><td>float64</td></tr>
+        <tr><td>wsk_kapital_do_aktywa</td><td>float64</td></tr>
+        <tr><td>przychody_sprzedazy</td><td>float64</td></tr>
+        <tr><td>koszty_sprzedanych_produktow</td><td>float64</td></tr>
+        <tr><td>koszty_sprzedazy</td><td>float64</td></tr>
+        <tr><td>koszty_ogolnego_zarzadu</td><td>float64</td></tr>
+        <tr><td>zysk_sprzedazy</td><td>float64</td></tr>
+        <tr><td>pozostale_przychody_oper</td><td>float64</td></tr>
+        <tr><td>dotacje</td><td>float64</td></tr>
+        <tr><td>koszty_operacyjne_pozostale</td><td>float64</td></tr>
+        <tr><td>zysk_operacyjny</td><td>float64</td></tr>
+        <tr><td>przychody_finansowe</td><td>float64</td></tr>
+        <tr><td>dywidendy_udzialy</td><td>float64</td></tr>
+        <tr><td>przychody_odsetki</td><td>float64</td></tr>
+        <tr><td>koszty_finansowe</td><td>float64</td></tr>
+        <tr><td>koszty_odsetki</td><td>float64</td></tr>
+        <tr><td>zysk_brutto</td><td>float64</td></tr>
+        <tr><td>podatek_dochodowy</td><td>float64</td></tr>
+        <tr><td>zysk_netto</td><td>float64</td></tr>
+        <tr><td>koszty_operacyjne</td><td>float64</td></tr>
+        <tr><td>amortyzacja</td><td>float64</td></tr>
+        <tr><td>schemat_wsk_rzis</td><td>object</td></tr>
+        <tr><td>przychody</td><td>float64</td></tr>
+        <tr><td>RP_przeplywy_operacyjne</td><td>float64</td></tr>
+        <tr><td>RP_amortyzacja</td><td>float64</td></tr>
+        <tr><td>wsk_amortyzacja</td><td>float64</td></tr>
+        <tr><td>wsk_koszty_operacyjne</td><td>float64</td></tr>
+        <tr><td>wsk_Zobowiazania_krotkoterminowe</td><td>float64</td></tr>
+        <tr><td>wsk_Zobowiazania_dlugoterminowe</td><td>float64</td></tr>
+        <tr><td>wsk_marza_brutto_1</td><td>float64</td></tr>
+        <tr><td>wsk_marza_brutto_2</td><td>float64</td></tr>
+        <tr><td>wsk_stopa_marzy_brutto</td><td>float64</td></tr>
+        <tr><td>wsk_rent_operacyjna</td><td>float64</td></tr>
+        <tr><td>wsk_ROS</td><td>float64</td></tr>
+        <tr><td>wsk_ROA</td><td>float64</td></tr>
+        <tr><td>wsk_s_ROA</td><td>float64</td></tr>
+        <tr><td>wsk_rent_operacyjna_aktywow</td><td>float64</td></tr>
+        <tr><td>wsk_ROE</td><td>float64</td></tr>
+        <tr><td>wsk_s_ROE</td><td>float64</td></tr>
+        <tr><td>wsk_mnoznik_kap_wl</td><td>float64</td></tr>
+        <tr><td>wsk_zwrot_aktywa_trwale</td><td>float64</td></tr>
+        <tr><td>wsk_rent_kaptial_podstawowy</td><td>float64</td></tr>
+        <tr><td>wsk_akt_generowania_got_1</td><td>float64</td></tr>
+        <tr><td>wsk_akt_generowania_got_2</td><td>float64</td></tr>
+        <tr><td>wsk_rent_sprzedazy</td><td>float64</td></tr>
+        <tr><td>wsk_ebit</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_1</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_2</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_3</td><td>float64</td></tr>
+        <tr><td>wsk_marza_ebitda_1</td><td>float64</td></tr>
+        <tr><td>wsk_marza_ebitda_2</td><td>float64</td></tr>
+        <tr><td>wsk_marza_ebitda_3</td><td>float64</td></tr>
+        <tr><td>wsk_marza_ebit</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_aktywa_1</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_aktywa_2</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_aktywa_3</td><td>float64</td></tr>
+        <tr><td>wsk_zwrot_aktywa_mat</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_zobowiazania</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_op_zobowiazania</td><td>float64</td></tr>
+        <tr><td>wsk_sprzedaz_kap_obrotowy</td><td>float64</td></tr>
+        <tr><td>wsk_koszty_przychody</td><td>float64</td></tr>
+        <tr><td>wsk_rent_kapitalu</td><td>float64</td></tr>
+        <tr><td>wsk_stopa_zysku_sprzedaz</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycie_wyd_fin_gotowkowe_1</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycie_wyd_fin_gotowkowe_2</td><td>float64</td></tr>
+        <tr><td>wsk_koszt_długu_1</td><td>float64</td></tr>
+        <tr><td>wsk_koszt_długu_2</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycie_aktywow_tr_kapitalem_st</td><td>float64</td></tr>
+        <tr><td>wsk_struktury_finansowania</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycie_zob_kr_gotowkowe_1</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycie_zob_kr_gotowkowe_2</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_operacyjny_zob_1</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_operacyjny_zob_2</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenia_gotowki_1</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenia_gotowki_2</td><td>float64</td></tr>
+        <tr><td>wsk_koszty_fin_przychody</td><td>float64</td></tr>
+        <tr><td>wsk_koszty_odsetki_przychody</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenie_gotowka</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_kap_wlasnego_aktywa_1</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_kap_wlasnego_aktywa_2</td><td>float64</td></tr>
+        <tr><td>wsk_ogolnego_zadluzenia_1</td><td>float64</td></tr>
+        <tr><td>wsk_ogolnego_zadluzenia_2</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycie_aktywow_kap_stalym</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenie_kap_wlasnego</td><td>float64</td></tr>
+        <tr><td>wsk_ogolnego_zadluzenia_pozyczki</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenia_pozyczki_dlugie</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenia_dlugie</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenia_krotkie</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycia_zobowiazan_rz_aktywami_trwalymi</td><td>float64</td></tr>
+        <tr><td>wsk_ROE_brutto</td><td>float64</td></tr>
+        <tr><td>wsk_ROA_operacyjny</td><td>float64</td></tr>
+        <tr><td>wsk_efekt_dzwigni_fin_1</td><td>float64</td></tr>
+        <tr><td>wsk_efekt_dzwigni_fin_2</td><td>float64</td></tr>
+        <tr><td>wsk_pokrycia_odsetek_zyskiem</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_koszty_odsetkowe_1</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_koszty_odsetkowe_2</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_koszty_odsetkowe_3</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_koszty_finansowe_1</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_koszty_finansowe_2</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_koszty_finansowe_3</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_1</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_2</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_3</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_4</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_1</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_2</td><td>float64</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_3</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_aktywow_1</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_aktywow_2</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_rz_aktywow_trwalych</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_wartosci_niewaterialnych</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_zapasow</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_naleznosci</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_naleznosci_dostaw_uslug</td><td>float64</td></tr>
+        <tr><td>wsk_cykl_operacyjny</td><td>float64</td></tr>
+        <tr><td>wsk_poziom_kosztow_operacyjnych</td><td>float64</td></tr>
+        <tr><td>wsk_poziom_kosztow_finansowych</td><td>float64</td></tr>
+        <tr><td>wsk_obrotowsci_naleznosci</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_zobowiazan</td><td>float64</td></tr>
+        <tr><td>wsk_rotacja_zobowiazan_dostaw_uslug</td><td>float64</td></tr>
+        <tr><td>wsk_cykl_konwersji_gotowki</td><td>float64</td></tr>
+        <tr><td>wsk_plynnosc_biez_1</td><td>float64</td></tr>
+        <tr><td>wsk_plynnosc_biez_2</td><td>float64</td></tr>
+        <tr><td>wsk_plynnosc_biez_3</td><td>float64</td></tr>
+        <tr><td>wsk_plynnosc_szybka_1</td><td>float64</td></tr>
+        <tr><td>wsk_plynnosc_szybka_2</td><td>float64</td></tr>
+        <tr><td>wsk_plynnosc_gotowkowa_1</td><td>float64</td></tr>
+        <tr><td>wsk_poziom_kapitalu_obrotowego_netto</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_kapitalu_obrotowego_netto</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_zob_biez_sprzedaz_1</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_zob_biez_sprzedaz_2</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_zob_biez_aktywa_1</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_zob_biez_aktywa_2</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_zapasy_zobowiazania</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_zapasy_kap_obrotowy</td><td>float64</td></tr>
+        <tr><td>wsk_udzial_kap_obrotowego_w_fin</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_ebitda_1</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_ebitda_2</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_ebitda_3</td><td>float64</td></tr>
+        <tr><td>wsk_zysk_CF_operacyjny</td><td>float64</td></tr>
+        <tr><td>wsk_obrotowosc_gotowkowa</td><td>float64</td></tr>
+        <tr><td>wsk_struktura_majatku</td><td>float64</td></tr>
+        <tr><td>wsk_struktury_kapitalu</td><td>float64</td></tr>
+        <tr><td>wsk_zast_kapitalu_wlasnego</td><td>float64</td></tr>
+        <tr><td>wsk_zast_kapitalu_podstawowego</td><td>float64</td></tr>
+        <tr><td>wsk_zast_kapitalu_stalego</td><td>float64</td></tr>
+        <tr><td>wsk_zast_kapitalu_obcego</td><td>float64</td></tr>
+        <tr><td>wsk_sytuacji_fin</td><td>float64</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_1</td><td>float64</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_2</td><td>float64</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_s_1</td><td>float64</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_s_2</td><td>float64</td></tr>
+        <tr><td>wsk_zadluzenia</td><td>float64</td></tr>
+        <tr><td>wsk_zob_dlugoterminowe_aktywa_rzeczowe</td><td>float64</td></tr>
+        <tr><td>wsk_zob_oprocentowanych</td><td>float64</td></tr>
+        <tr><td>wsk_zob_oprocentowanych_aktywa_rzeczowe</td><td>float64</td></tr>
+        <tr><td>wsk_struktura_kap_obcego_s</td><td>float64</td></tr>
+        <tr><td>wsk_zob_s_aktywa_rzeczowe</td><td>float64</td></tr>
+        <tr><td>wsk_fin_majatku_kapitalem</td><td>float64</td></tr>
+        <tr><td>default</td><td>int64</td></tr>
+
+    </table>
+    
+    <h2>❌ Brakujące Wartości (NaN)</h2>
+
+    <table>
+        <tr>
+            <th>Kolumna</th>
+            <th>Liczba brakujących</th>
+            <th>Procent</th>
+        </tr>
+        <tr><td>RP_przeplywy_operacyjne</td><td>2970</td><td>99.00%</td></tr>
+        <tr><td>wsk_akt_generowania_got_2</td><td>2970</td><td>99.00%</td></tr>
+        <tr><td>wsk_zysk_CF_operacyjny</td><td>2970</td><td>99.00%</td></tr>
+        <tr><td>wsk_pokrycie_wyd_fin_gotowkowe_2</td><td>2970</td><td>99.00%</td></tr>
+        <tr><td>wsk_pokrycie_zob_kr_gotowkowe_2</td><td>2970</td><td>99.00%</td></tr>
+        <tr><td>wsk_zadluzenia_gotowki_2</td><td>2970</td><td>99.00%</td></tr>
+        <tr><td>RP_amortyzacja</td><td>2879</td><td>95.97%</td></tr>
+        <tr><td>wsk_plynnosc_biez_1</td><td>114</td><td>3.80%</td></tr>
+        <tr><td>wsk_kapital_do_aktywa</td><td>46</td><td>1.53%</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_s_2</td><td>46</td><td>1.53%</td></tr>
+    </table>
+
+    <h2>∞ Wartości Nieskończone (inf/-inf)</h2>
+
+    <table>
+        <tr>
+            <th>Kolumna</th>
+            <th>Liczba wartości inf</th>
+        </tr>
+        <tr><td>wsk_kapital_do_aktywa</td><td>5</td></tr>
+        <tr><td>wsk_plynnosc_biez_1</td><td>906</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_s_2</td><td>103</td></tr>
+    </table>
+
+    <h2>📈 Skośność Rozkładów (Skewness)</h2>
+    <p>Interpretacja: |skośność| < 0.5 = Symetryczny, > 0 = Prawostronna, < 0 = Lewostronna</p>
+    <table>
+        <tr>
+            <th>Kolumna</th>
+            <th>Skośność</th>
+            <th>Typ rozkładu</th>
+        </tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m_powiazane</td><td>54.7449</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zob_oprocentowanych</td><td>54.7448</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zob_oprocentowanych_aktywa_rzeczowe</td><td>54.7447</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m</td><td>54.7447</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_zob_biez_aktywa_1</td><td>54.7446</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_sytuacji_fin</td><td>54.7436</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m</td><td>54.7432</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rent_operacyjna</td><td>-54.7406</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_4</td><td>54.7358</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m_kapitale</td><td>54.7339</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_kap_wlasnego_aktywa_2</td><td>54.7099</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_2</td><td>54.7083</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_kap_wlasnego_aktywa_1</td><td>54.7083</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_1</td><td>54.7083</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ogolnego_zadluzenia_2</td><td>-54.7082</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_s_1</td><td>54.7081</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_struktury_finansowania</td><td>54.7021</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_cykl_konwersji_gotowki</td><td>54.6565</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ogolnego_zadluzenia_1</td><td>54.6501</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_struktura_kap_obcego_s</td><td>54.6501</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m_kapitale</td><td>54.6475</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_naleznosci</td><td>54.6261</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_cykl_operacyjny</td><td>54.6185</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Ujemna_wartosc_firmy</td><td>54.5965</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m_kapitale</td><td>54.5732</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_zob_biez_sprzedaz_1</td><td>54.5316</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_zobowiazan</td><td>54.5315</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rent_operacyjna_aktywow</td><td>54.4764</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zob_s_aktywa_rzeczowe</td><td>54.3980</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zwrot_aktywa_mat</td><td>54.3825</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zob_dlugoterminowe_aktywa_rzeczowe</td><td>54.3510</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_zob_biez_aktywa_2</td><td>54.3404</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_krotkoterminowe</td><td>54.2543</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_obrotowsci_naleznosci</td><td>54.1780</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_aktywa_3</td><td>54.1454</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_aktywow_2</td><td>53.9803</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_krotkoterminowe</td><td>53.8706</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_Zobowiazania_krotkoterminowe</td><td>53.7019</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_koszt_długu_2</td><td>53.4330</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_marza_ebitda_2</td><td>-53.3135</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_marza_brutto_1</td><td>-53.2752</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_udzial_kapitalu_obrotowego_netto</td><td>-52.8581</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>Aktywa_obrotowe</td><td>51.9756</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rent_kaptial_podstawowy</td><td>51.8466</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_aktywa_1</td><td>49.8636</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_ebitda_3</td><td>49.7936</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_kap_obrotowego_w_fin</td><td>49.5597</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_operacyjny_zob_2</td><td>49.0624</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_efekt_dzwigni_fin_2</td><td>48.8624</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_zob_biez_sprzedaz_2</td><td>-48.6614</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_rotacja_zapasow</td><td>48.3415</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_3</td><td>48.2767</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_ebitda_2</td><td>47.5197</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_ebitda_1</td><td>47.4886</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycie_aktywow_kap_stalym</td><td>47.1213</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zast_kapitalu_wlasnego</td><td>47.1212</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zast_kapitalu_stalego</td><td>46.8107</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_akt_generowania_got_1</td><td>46.5848</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ROE_brutto</td><td>46.5180</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_zobowiazan_dostaw_uslug</td><td>46.1665</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_s_ROE</td><td>45.9700</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ROE</td><td>45.9700</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_efekt_dzwigni_fin_1</td><td>45.8285</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_koszt_długu_1</td><td>45.5818</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zadluzenia_gotowki_1</td><td>45.2030</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rent_kapitalu</td><td>44.5369</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycie_aktywow_tr_kapitalem_st</td><td>44.4978</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_stopa_marzy_brutto</td><td>43.8764</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>koszty_sprzedazy</td><td>43.7450</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_aktywa_2</td><td>42.7568</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_rezerwy</td><td>42.3577</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Kredyty_pozyczki</td><td>41.6729</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zadluzenia_pozyczki_dlugie</td><td>41.1268</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m_powiazane</td><td>40.3687</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_aktywow_1</td><td>40.3626</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zadluzenia_dlugie</td><td>40.1957</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycie_zob_kr_gotowkowe_1</td><td>39.9710</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_koszty_fin_przychody</td><td>39.1508</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_poziom_kosztow_finansowych</td><td>39.1508</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Wartosc_firmy</td><td>38.5900</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zadluzenie_gotowka</td><td>37.5251</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_koszty_odsetki_przychody</td><td>37.5251</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_2</td><td>37.1557</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_koszty_odsetkowe_2</td><td>37.1557</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_koszty_finansowe_2</td><td>36.9448</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Pozostale_rezerwy</td><td>36.8377</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycia_odsetek_zyskiem</td><td>36.4642</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Kredyty_pozyczki_dlugie</td><td>35.8972</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_struktury_kapitalu</td><td>35.8552</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_s_ROA</td><td>-35.1826</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_ROA</td><td>-35.1826</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>Aktywa</td><td>34.9125</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_zobowiazania</td><td>34.8181</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>koszty_finansowe</td><td>34.6884</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_struktura_majatku</td><td>34.5889</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_wartosci_niewaterialnych</td><td>34.1753</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_zapasy_kap_obrotowy</td><td>34.0013</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dlugoterminowe</td><td>33.8873</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_sprzedaz_kap_obrotowy</td><td>33.7859</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_marza_ebitda_1</td><td>33.7517</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_marza_ebit</td><td>33.7091</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_mnoznik_kap_wl</td><td>33.4258</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>przychody_odsetki</td><td>33.3798</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Inne_rozliczenia_miedzyokresowe_dlugie</td><td>32.8906</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zadluzenia_krotkie</td><td>32.7334</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_koszty_odsetkowe_1</td><td>32.6025</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_1</td><td>32.6025</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycie_wyd_fin_gotowkowe_1</td><td>32.5765</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_koszty_finansowe_1</td><td>32.5765</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>koszty_odsetki</td><td>32.2798</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_koszty_finansowe_3</td><td>32.2736</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_koszty_odsetkowe_3</td><td>32.2116</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_marza_ebitda_3</td><td>32.1845</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_plynnosc_gotowkowa_1</td><td>31.7680</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_marza_brutto_2</td><td>31.1770</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_odsetki_3</td><td>31.0671</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zast_kapitalu_podstawowego</td><td>30.9362</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_pow12m_pozostale</td><td>30.7777</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Inne_rozliczenia_miedzyokresowe</td><td>30.5600</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ogolnego_zadluzenia_pozyczki</td><td>30.5269</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Kapital_zapasowy</td><td>30.5200</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pozostale_sadowe</td><td>30.3386</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Inne_rozliczenia_miedzyokresowe_krotkie</td><td>30.1478</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Rozliczenia_miedzyokresowe_dlugie</td><td>29.7470</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m_kapitale</td><td>29.5450</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dlugoterminowe</td><td>28.9952</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Inwestycje_krotkoterminowe</td><td>28.9531</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zast_kapitalu_obcego</td><td>28.9058</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Rozliczenia_miedzyokresowe_b</td><td>27.8647</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_poziom_kosztow_operacyjnych</td><td>27.1716</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_koszty_przychody</td><td>27.1716</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_stopa_zysku_sprzedaz</td><td>-27.1700</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_plynnosc_szybka_1</td><td>27.0913</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Srodki_pieniezne</td><td>27.0691</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_poziom_kapitalu_obrotowego_netto</td><td>26.9667</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ROA_operacyjny</td><td>-26.8595</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>Pozostale_rezerwy_krotkie</td><td>26.3735</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_plynnosc_biez_3</td><td>26.2772</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_naleznosci_dostaw_uslug</td><td>25.5271</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m</td><td>25.5132</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Inne_zobowiazania_fin_dlugoterminowe</td><td>25.4967</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_plynnosc_biez_2</td><td>25.2617</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ROS</td><td>24.3591</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rent_sprzedazy</td><td>24.3591</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_fin_majatku_kapitalem</td><td>23.8914</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_pow12m_pozostale</td><td>23.6431</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_Zobowiazania_dlugoterminowe</td><td>22.9447</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>dywidendy_udzialy</td><td>22.8952</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_plynnosc_szybka_2</td><td>22.8870</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m</td><td>22.2026</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_udzial_zapasy_zobowiazania</td><td>21.8075</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Rzeczowe_aktywa_trwale</td><td>21.7152</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Rezerwa_z_tytulu_odroczonego_podatku_dochodowego</td><td>21.3079</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>zysk_netto</td><td>-21.0040</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>Zysk_netto</td><td>-20.9512</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>Rezerwa_na_swiadczenia_emerytalne_dlugie</td><td>20.6312</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Inwestycje_dlugoterminowe</td><td>20.6124</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m_powiazane</td><td>19.7865</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>dotacje</td><td>19.6613</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycia_zobowiazan_rz_aktywami_trwalymi</td><td>-19.5858</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>pozostale_przychody_oper</td><td>19.3921</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Inne_zobowiazania_fin_krotkoterminowe</td><td>19.3165</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>przychody_finansowe</td><td>19.2501</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zadluzenie_kap_wlasnego</td><td>19.1031</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zadluzenia</td><td>19.1031</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Rezerwy_na_zobowiazania</td><td>18.8142</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Wartosci_niematerialne_prawne</td><td>18.1693</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>koszty_operacyjne_pozostale</td><td>17.4223</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Srodki_trwale</td><td>17.0557</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>amortyzacja</td><td>16.9965</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>zysk_brutto</td><td>-16.9508</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>Rezerwa_na_swiadczenia_emerytalne</td><td>16.8671</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m_powiazane</td><td>16.6663</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Kapital_podstawowy</td><td>16.3090</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>koszty_ogolnego_zarzadu</td><td>16.1923</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_amortyzacja</td><td>15.6377</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Rezerwa_na_swiadczenia_emerytalne_krotkie</td><td>14.9476</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Aktywa_trwale</td><td>14.6934</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebit</td><td>13.5317</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_obrotowosc_gotowkowa</td><td>13.1762</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Rozliczenia_miedzyokresowe_krotkie</td><td>12.8008</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Kapital_wlasny</td><td>12.7781</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_1</td><td>12.5542</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_zobowiazan_2</td><td>11.7972</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>koszty_sprzedanych_produktow</td><td>11.5128</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zwrot_aktywa_trwale</td><td>10.9586</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_1</td><td>10.4244</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_2</td><td>9.4819</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_operacyjny_zob_1</td><td>9.2481</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_op_zobowiazania</td><td>9.2481</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zobowiazania_dostaw_uslug_12m_pozostale</td><td>9.1363</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_rotacja_rz_aktywow_trwalych</td><td>8.7371</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Naleznosci_dostaw_uslug_12m_pozostale</td><td>8.3089</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Zapasy</td><td>8.1372</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>Kredyty_pozyczki_krotkie</td><td>8.1196</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>zysk_operacyjny</td><td>7.9302</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_ebitda_3</td><td>7.3624</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>zysk_sprzedazy</td><td>5.9526</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>podatek_dochodowy</td><td>5.2040</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycie_wyd_fin_gotowkowe_2</td><td>-5.1959</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>RP_amortyzacja</td><td>3.9254</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>koszty_operacyjne</td><td>3.4368</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>formaWlasnosci_Symbol</td><td>-3.3716</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_koszty_operacyjne</td><td>3.3678</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_zysk_CF_operacyjny</td><td>3.2756</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>przychody_sprzedazy</td><td>3.2360</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>przychody</td><td>3.2282</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_akt_generowania_got_2</td><td>-3.0716</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_zadluzenia_gotowki_2</td><td>3.0108</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_pokrycie_zob_kr_gotowkowe_2</td><td>2.8765</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>RP_przeplywy_operacyjne</td><td>2.2009</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>wsk_liczba_dni_istnienia</td><td>1.0347</td><td>Prawostronna (dodatnia)</td></tr>
+        <tr><td>pkdKod</td><td>-0.3785</td><td>Symetryczny</td></tr>
+        <tr><td>szczegolnaFormaPrawna_Symbol</td><td>nan</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_kapital_do_aktywa</td><td>nan</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_plynnosc_biez_1</td><td>nan</td><td>Lewostronna (ujemna)</td></tr>
+        <tr><td>wsk_struktura_kap_wlasnego_s_2</td><td>nan</td><td>Lewostronna (ujemna)</td></tr>
+
+    </table>
+    
+    <h2>🎯 Zmienna Docelowa (default)</h2>
+    <table>
+        <tr>
+            <th>Klasa</th>
+            <th>Liczba obserwacji</th>
+            <th>Procent</th>
+        </tr>
+        <tr><td>0</td><td>2817</td><td>93.90%</td></tr>
+        <tr><td>1</td><td>183</td><td>6.10%</td></tr>
+
+    </table>
+    
+    <h2>🔗 Korelacje z Zmienną Docelową</h2>
+    <p>Top 20 cech o największej korelacji z 'default':</p>
+    <table>
+        <tr>
+            <th>Kolumna</th>
+            <th>Korelacja</th>
+        </tr>
+        <tr><td>wsk_zadluzenia_pozyczki_dlugie</td><td><span style='color: #27ae60; font-weight: bold;'>0.1198</span></td></tr>
+        <tr><td>RP_przeplywy_operacyjne</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.1088</span></td></tr>
+        <tr><td>wsk_ogolnego_zadluzenia_pozyczki</td><td><span style='color: #27ae60; font-weight: bold;'>0.0905</span></td></tr>
+        <tr><td>wsk_rent_operacyjna</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0719</span></td></tr>
+        <tr><td>wsk_ebitda_3</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0699</span></td></tr>
+        <tr><td>przychody_sprzedazy</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0681</span></td></tr>
+        <tr><td>przychody</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0680</span></td></tr>
+        <tr><td>wsk_ebitda_2</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0674</span></td></tr>
+        <tr><td>wsk_ebitda_1</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0658</span></td></tr>
+        <tr><td>wsk_zadluzenia_gotowki_2</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0647</span></td></tr>
+        <tr><td>wsk_zysk_CF_operacyjny</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0636</span></td></tr>
+        <tr><td>zysk_operacyjny</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0633</span></td></tr>
+        <tr><td>wsk_koszty_operacyjne</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0626</span></td></tr>
+        <tr><td>zysk_sprzedazy</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0600</span></td></tr>
+        <tr><td>wsk_ebit</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0594</span></td></tr>
+        <tr><td>podatek_dochodowy</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0574</span></td></tr>
+        <tr><td>koszty_operacyjne</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0562</span></td></tr>
+        <tr><td>zysk_brutto</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0475</span></td></tr>
+        <tr><td>Kapital_wlasny</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0470</span></td></tr>
+        <tr><td>zysk_netto</td><td><span style='color: #e74c3c; font-weight: bold;'>-0.0434</span></td></tr>
+
+    </table>
+    
+    <h2>📊 Statystyki Opisowe - Kolumny Numeryczne</h2>
+    <table>
+        <tr>
+            <th>Kolumna</th>
+            <th>Min</th>
+            <th>Q1</th>
+            <th>Mediana</th>
+            <th>Średnia</th>
+            <th>Q3</th>
+            <th>Max</th>
+            <th>Std Dev</th>
+        </tr>
+        <tr>
+            <td>szczegolnaFormaPrawna_Symbol</td>
+            <td>117.0000</td>
+            <td>117.0000</td>
+            <td>117.0000</td>
+            <td>117.0000</td>
+            <td>117.0000</td>
+            <td>117.0000</td>
+            <td>0.0000</td>
+        </tr>
+        <tr>
+            <td>formaWlasnosci_Symbol</td>
+            <td>0.0000</td>
+            <td>214.0000</td>
+            <td>214.0000</td>
+            <td>200.5650</td>
+            <td>214.0000</td>
+            <td>338.0000</td>
+            <td>52.3279</td>
+        </tr>
+        <tr>
+            <td>pkdKod</td>
+            <td>111.0000</td>
+            <td>4212.0000</td>
+            <td>4941.0000</td>
+            <td>5356.2077</td>
+            <td>6920.0000</td>
+            <td>9609.0000</td>
+            <td>2039.9339</td>
+        </tr>
+        <tr>
+            <td>wsk_liczba_dni_istnienia</td>
+            <td>1197.0000</td>
+            <td>1832.0000</td>
+            <td>3042.5000</td>
+            <td>4166.7430</td>
+            <td>5982.0000</td>
+            <td>15903.0000</td>
+            <td>2879.6532</td>
+        </tr>
+        <tr>
+            <td>Aktywa</td>
+            <td>0.0000</td>
+            <td>83314.3725</td>
+            <td>597353.9950</td>
+            <td>4558906.6592</td>
+            <td>2668879.5425</td>
+            <td>1336251000.0000</td>
+            <td>28821419.2297</td>
+        </tr>
+        <tr>
+            <td>Aktywa_trwale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>23060.8400</td>
+            <td>2402582.4913</td>
+            <td>572736.0100</td>
+            <td>321843606.0900</td>
+            <td>13528769.8962</td>
+        </tr>
+        <tr>
+            <td>Wartosci_niematerialne_prawne</td>
+            <td>-0.0800</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>23062.5895</td>
+            <td>0.0000</td>
+            <td>6830499.8800</td>
+            <td>237091.5438</td>
+        </tr>
+        <tr>
+            <td>Wartosc_firmy</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>1413.0815</td>
+            <td>0.0000</td>
+            <td>1700000.3200</td>
+            <td>36094.0976</td>
+        </tr>
+        <tr>
+            <td>Rzeczowe_aktywa_trwale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>1311326.5382</td>
+            <td>165910.8550</td>
+            <td>312948569.0900</td>
+            <td>8318563.1350</td>
+        </tr>
+        <tr>
+            <td>Srodki_trwale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>1168523.6130</td>
+            <td>125418.8825</td>
+            <td>225389706.8500</td>
+            <td>7024352.3750</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dlugoterminowe</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>43754.3122</td>
+            <td>0.0000</td>
+            <td>36371551.9700</td>
+            <td>817023.6812</td>
+        </tr>
+        <tr>
+            <td>Inwestycje_dlugoterminowe</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>900074.4223</td>
+            <td>0.0000</td>
+            <td>319181677.7600</td>
+            <td>10147673.5814</td>
+        </tr>
+        <tr>
+            <td>Rozliczenia_miedzyokresowe_dlugie</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>21743.4942</td>
+            <td>0.0000</td>
+            <td>11363697.0000</td>
+            <td>269297.5704</td>
+        </tr>
+        <tr>
+            <td>Aktywa_obrotowe</td>
+            <td>0.0000</td>
+            <td>50000.0000</td>
+            <td>344786.3100</td>
+            <td>2133003.0728</td>
+            <td>1546998.7025</td>
+            <td>1336251000.0000</td>
+            <td>24803839.1895</td>
+        </tr>
+        <tr>
+            <td>Zapasy</td>
+            <td>-966.6600</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>367370.1002</td>
+            <td>82949.8475</td>
+            <td>23814911.0900</td>
+            <td>1376453.7118</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_krotkoterminowe</td>
+            <td>0.0000</td>
+            <td>5034.7850</td>
+            <td>96254.8350</td>
+            <td>1100508.1132</td>
+            <td>555653.9325</td>
+            <td>1336251000.0000</td>
+            <td>24458610.0993</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_12m_powiazane</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>31597.5584</td>
+            <td>0.0000</td>
+            <td>7907335.3200</td>
+            <td>320156.5483</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_pow12m_powiazane</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>454.7332</td>
+            <td>0.0000</td>
+            <td>747278.1500</td>
+            <td>16464.0411</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_12m_kapitale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>5130.9748</td>
+            <td>0.0000</td>
+            <td>3296016.8500</td>
+            <td>92801.6638</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_pow12m_kapitale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>13038.7673</td>
+            <td>0.0000</td>
+            <td>38626808.9000</td>
+            <td>705270.4391</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_12m_pozostale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>276894.9868</td>
+            <td>55304.8100</td>
+            <td>20609873.0600</td>
+            <td>997249.6658</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_pow12m_pozostale</td>
+            <td>-189779.4100</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>2806.0456</td>
+            <td>0.0000</td>
+            <td>1664829.3800</td>
+            <td>46839.6021</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_pozostale_sadowe</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>2469.6799</td>
+            <td>0.0000</td>
+            <td>1788209.9100</td>
+            <td>42730.3896</td>
+        </tr>
+        <tr>
+            <td>Inwestycje_krotkoterminowe</td>
+            <td>-1631738.4100</td>
+            <td>0.0000</td>
+            <td>26880.4150</td>
+            <td>562736.8064</td>
+            <td>300082.5125</td>
+            <td>137257820.8000</td>
+            <td>3293893.8068</td>
+        </tr>
+        <tr>
+            <td>Srodki_pieniezne</td>
+            <td>-1786620.1000</td>
+            <td>0.0000</td>
+            <td>19757.2800</td>
+            <td>478954.9532</td>
+            <td>246511.3900</td>
+            <td>114616494.2900</td>
+            <td>2923584.2109</td>
+        </tr>
+        <tr>
+            <td>Rozliczenia_miedzyokresowe_krotkie</td>
+            <td>-12955.8300</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>39711.6241</td>
+            <td>7371.9600</td>
+            <td>4923222.5300</td>
+            <td>256859.8035</td>
+        </tr>
+        <tr>
+            <td>Kapital_wlasny</td>
+            <td>0.0000</td>
+            <td>39991.3725</td>
+            <td>262860.9050</td>
+            <td>2296328.4186</td>
+            <td>1336562.9800</td>
+            <td>219145000.0000</td>
+            <td>9613367.5801</td>
+        </tr>
+        <tr>
+            <td>Kapital_podstawowy</td>
+            <td>-5000.0000</td>
+            <td>5000.0000</td>
+            <td>50000.0000</td>
+            <td>916621.2473</td>
+            <td>120000.0000</td>
+            <td>166017000.0000</td>
+            <td>6362255.3150</td>
+        </tr>
+        <tr>
+            <td>Kapital_zapasowy</td>
+            <td>-236342.1000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>1072901.7550</td>
+            <td>293981.7675</td>
+            <td>343485812.1800</td>
+            <td>8051600.6034</td>
+        </tr>
+        <tr>
+            <td>Zysk_netto</td>
+            <td>-37059219.3900</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>119398.6874</td>
+            <td>98367.4475</td>
+            <td>7457592.7400</td>
+            <td>933706.6995</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_rezerwy</td>
+            <td>-3742.2300</td>
+            <td>8429.0475</td>
+            <td>172230.5000</td>
+            <td>2257113.4164</td>
+            <td>956277.6775</td>
+            <td>1117106000.0000</td>
+            <td>22434569.0088</td>
+        </tr>
+        <tr>
+            <td>Rezerwy_na_zobowiazania</td>
+            <td>-1161.4400</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>37271.4894</td>
+            <td>0.0000</td>
+            <td>10825432.9300</td>
+            <td>316008.2066</td>
+        </tr>
+        <tr>
+            <td>Rezerwa_z_tytulu_odroczonego_podatku_dochodowego</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>8382.0330</td>
+            <td>0.0000</td>
+            <td>3616157.0000</td>
+            <td>127915.2580</td>
+        </tr>
+        <tr>
+            <td>Rezerwa_na_swiadczenia_emerytalne</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>11520.6531</td>
+            <td>0.0000</td>
+            <td>3470627.0000</td>
+            <td>124932.2900</td>
+        </tr>
+        <tr>
+            <td>Rezerwa_na_swiadczenia_emerytalne_dlugie</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>7245.5696</td>
+            <td>0.0000</td>
+            <td>3222154.0000</td>
+            <td>100943.8483</td>
+        </tr>
+        <tr>
+            <td>Rezerwa_na_swiadczenia_emerytalne_krotkie</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>3940.2813</td>
+            <td>0.0000</td>
+            <td>998008.5900</td>
+            <td>40737.9548</td>
+        </tr>
+        <tr>
+            <td>Pozostale_rezerwy</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>5791.3325</td>
+            <td>0.0000</td>
+            <td>6848178.8000</td>
+            <td>162224.7897</td>
+        </tr>
+        <tr>
+            <td>Pozostale_rezerwy_krotkie</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>6334.5811</td>
+            <td>0.0000</td>
+            <td>3547273.0000</td>
+            <td>90194.0335</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dlugoterminowe</td>
+            <td>-225000.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>769073.3692</td>
+            <td>0.0000</td>
+            <td>319451414.3300</td>
+            <td>7567146.1942</td>
+        </tr>
+        <tr>
+            <td>Kredyty_pozyczki_dlugie</td>
+            <td>-225000.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>575921.2144</td>
+            <td>0.0000</td>
+            <td>304434484.6900</td>
+            <td>6536683.6535</td>
+        </tr>
+        <tr>
+            <td>Inne_zobowiazania_fin_dlugoterminowe</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>15586.7924</td>
+            <td>0.0000</td>
+            <td>8120000.0000</td>
+            <td>273378.2039</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_krotkoterminowe</td>
+            <td>-277872.6600</td>
+            <td>0.0000</td>
+            <td>35931.5350</td>
+            <td>1112746.2727</td>
+            <td>554427.6250</td>
+            <td>1117106000.0000</td>
+            <td>20492558.8280</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_12m_powiazane</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>34265.9146</td>
+            <td>0.0000</td>
+            <td>11450363.5400</td>
+            <td>434137.1679</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_pow12m_powiazane</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>12.6667</td>
+            <td>0.0000</td>
+            <td>38000.0000</td>
+            <td>693.7819</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_12m_kapitale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>10013.6023</td>
+            <td>0.0000</td>
+            <td>28237397.1000</td>
+            <td>515841.8316</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_pow12m_kapitale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>7.1073</td>
+            <td>0.0000</td>
+            <td>20103.1300</td>
+            <td>367.4183</td>
+        </tr>
+        <tr>
+            <td>Kredyty_pozyczki_krotkie</td>
+            <td>-56030.4400</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>127962.7664</td>
+            <td>0.0000</td>
+            <td>8333150.4400</td>
+            <td>512113.9066</td>
+        </tr>
+        <tr>
+            <td>Inne_zobowiazania_fin_krotkoterminowe</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>6495.1123</td>
+            <td>0.0000</td>
+            <td>1792066.9000</td>
+            <td>71579.9006</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_12m_pozostale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>209743.6794</td>
+            <td>37858.5625</td>
+            <td>16358098.3000</td>
+            <td>809198.4959</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_pow12m_pozostale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>3211.7852</td>
+            <td>0.0000</td>
+            <td>2551460.5400</td>
+            <td>65428.4131</td>
+        </tr>
+        <tr>
+            <td>Rozliczenia_miedzyokresowe_b</td>
+            <td>-56443.7800</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>226958.5906</td>
+            <td>0.0000</td>
+            <td>112735679.5300</td>
+            <td>3121069.7552</td>
+        </tr>
+        <tr>
+            <td>Ujemna_wartosc_firmy</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>1739.6236</td>
+            <td>0.0000</td>
+            <td>4927187.2100</td>
+            <td>90039.2648</td>
+        </tr>
+        <tr>
+            <td>Inne_rozliczenia_miedzyokresowe</td>
+            <td>-56443.7800</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>154254.4638</td>
+            <td>0.0000</td>
+            <td>89001069.3800</td>
+            <td>2294626.5805</td>
+        </tr>
+        <tr>
+            <td>Inne_rozliczenia_miedzyokresowe_dlugie</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>116655.6377</td>
+            <td>0.0000</td>
+            <td>87795524.4800</td>
+            <td>2186570.4937</td>
+        </tr>
+        <tr>
+            <td>Inne_rozliczenia_miedzyokresowe_krotkie</td>
+            <td>-56443.7800</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>37309.2040</td>
+            <td>0.0000</td>
+            <td>19000000.0000</td>
+            <td>450846.5802</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_12m</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>126977.2540</td>
+            <td>0.0000</td>
+            <td>31001147.2800</td>
+            <td>802726.2515</td>
+        </tr>
+        <tr>
+            <td>Naleznosci_dostaw_uslug_pow12m</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>341070.7540</td>
+            <td>0.0000</td>
+            <td>1012721000.0000</td>
+            <td>18489791.2057</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_12m</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>110528.4563</td>
+            <td>0.0000</td>
+            <td>34110593.8900</td>
+            <td>852187.8461</td>
+        </tr>
+        <tr>
+            <td>Zobowiazania_dostaw_uslug_pow12m</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>358106.9867</td>
+            <td>0.0000</td>
+            <td>1071240000.0000</td>
+            <td>19558078.1264</td>
+        </tr>
+        <tr>
+            <td>Kredyty_pozyczki</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>43812.1873</td>
+            <td>0.0000</td>
+            <td>40791285.7000</td>
+            <td>832907.9938</td>
+        </tr>
+        <tr>
+            <td>wsk_kapital_do_aktywa</td>
+            <td>0.0000</td>
+            <td>0.3566</td>
+            <td>0.6588</td>
+            <td>inf</td>
+            <td>0.9215</td>
+            <td>inf</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>przychody_sprzedazy</td>
+            <td>-554633.6900</td>
+            <td>2400.0000</td>
+            <td>426483.7700</td>
+            <td>3118237.4850</td>
+            <td>2834544.1475</td>
+            <td>60043713.1900</td>
+            <td>6341706.4470</td>
+        </tr>
+        <tr>
+            <td>koszty_sprzedanych_produktow</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>167179.5700</td>
+            <td>0.0000</td>
+            <td>24311442.8800</td>
+            <td>1450633.6007</td>
+        </tr>
+        <tr>
+            <td>koszty_sprzedazy</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>14047.7161</td>
+            <td>0.0000</td>
+            <td>15788419.0100</td>
+            <td>312867.3666</td>
+        </tr>
+        <tr>
+            <td>koszty_ogolnego_zarzadu</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>33687.4792</td>
+            <td>0.0000</td>
+            <td>7834000.0000</td>
+            <td>314679.0659</td>
+        </tr>
+        <tr>
+            <td>zysk_sprzedazy</td>
+            <td>-10627236.9300</td>
+            <td>-114.2500</td>
+            <td>21147.3100</td>
+            <td>394388.7125</td>
+            <td>307876.0150</td>
+            <td>24681257.0500</td>
+            <td>1367845.7807</td>
+        </tr>
+        <tr>
+            <td>pozostale_przychody_oper</td>
+            <td>-107100.6700</td>
+            <td>0.0000</td>
+            <td>1988.6500</td>
+            <td>94892.8703</td>
+            <td>37804.5350</td>
+            <td>17047828.2900</td>
+            <td>495030.7967</td>
+        </tr>
+        <tr>
+            <td>dotacje</td>
+            <td>-50022.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>21386.4776</td>
+            <td>0.0000</td>
+            <td>6230145.4300</td>
+            <td>206318.0012</td>
+        </tr>
+        <tr>
+            <td>koszty_operacyjne_pozostale</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>151.0400</td>
+            <td>44118.6199</td>
+            <td>12152.0150</td>
+            <td>7358361.9400</td>
+            <td>251237.0918</td>
+        </tr>
+        <tr>
+            <td>zysk_operacyjny</td>
+            <td>-9357467.5000</td>
+            <td>0.0000</td>
+            <td>42240.7300</td>
+            <td>444954.0962</td>
+            <td>359107.3475</td>
+            <td>31168580.1400</td>
+            <td>1449773.2888</td>
+        </tr>
+        <tr>
+            <td>przychody_finansowe</td>
+            <td>-2535.0800</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>27785.5209</td>
+            <td>1867.9725</td>
+            <td>7113838.3900</td>
+            <td>229084.4194</td>
+        </tr>
+        <tr>
+            <td>dywidendy_udzialy</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>4986.7047</td>
+            <td>0.0000</td>
+            <td>2417716.8000</td>
+            <td>69664.3390</td>
+        </tr>
+        <tr>
+            <td>przychody_odsetki</td>
+            <td>-2535.0800</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>10908.1078</td>
+            <td>0.0875</td>
+            <td>7069488.1200</td>
+            <td>160753.8467</td>
+        </tr>
+        <tr>
+            <td>koszty_finansowe</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.5050</td>
+            <td>59944.9432</td>
+            <td>7942.3650</td>
+            <td>32624968.7600</td>
+            <td>769635.3029</td>
+        </tr>
+        <tr>
+            <td>koszty_odsetki</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>30940.9887</td>
+            <td>1009.5000</td>
+            <td>15089251.5300</td>
+            <td>351448.5480</td>
+        </tr>
+        <tr>
+            <td>zysk_brutto</td>
+            <td>-36918024.3900</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>153578.4362</td>
+            <td>117749.6950</td>
+            <td>8018433.7400</td>
+            <td>990024.7961</td>
+        </tr>
+        <tr>
+            <td>podatek_dochodowy</td>
+            <td>-751942.0000</td>
+            <td>0.0000</td>
+            <td>522.0000</td>
+            <td>34337.2926</td>
+            <td>15609.2500</td>
+            <td>1355941.0000</td>
+            <td>113019.2113</td>
+        </tr>
+        <tr>
+            <td>zysk_netto</td>
+            <td>-37059219.3900</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>119082.5782</td>
+            <td>103115.8350</td>
+            <td>7457592.7400</td>
+            <td>932954.1804</td>
+        </tr>
+        <tr>
+            <td>koszty_operacyjne</td>
+            <td>0.0000</td>
+            <td>4521.1150</td>
+            <td>319537.9000</td>
+            <td>2760677.5049</td>
+            <td>2297541.8900</td>
+            <td>58825393.5800</td>
+            <td>5883677.5616</td>
+        </tr>
+        <tr>
+            <td>amortyzacja</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>99408.1865</td>
+            <td>31289.0050</td>
+            <td>16205290.7200</td>
+            <td>522391.9972</td>
+        </tr>
+        <tr>
+            <td>przychody</td>
+            <td>-474965.4900</td>
+            <td>16721.7625</td>
+            <td>494775.9400</td>
+            <td>3240915.8763</td>
+            <td>2965052.7625</td>
+            <td>60380441.2700</td>
+            <td>6529609.0773</td>
+        </tr>
+        <tr>
+            <td>RP_przeplywy_operacyjne</td>
+            <td>-46738.7200</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>990861.3047</td>
+            <td>1791331.4200</td>
+            <td>7576000.0000</td>
+            <td>1719898.0037</td>
+        </tr>
+        <tr>
+            <td>RP_amortyzacja</td>
+            <td>0.0000</td>
+            <td>15771.3800</td>
+            <td>384883.6200</td>
+            <td>1149937.4470</td>
+            <td>1429755.3000</td>
+            <td>14952114.1900</td>
+            <td>2107801.5973</td>
+        </tr>
+        <tr>
+            <td>wsk_amortyzacja</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>79.2900</td>
+            <td>106134.4917</td>
+            <td>32491.9675</td>
+            <td>16205290.7200</td>
+            <td>549253.0432</td>
+        </tr>
+        <tr>
+            <td>wsk_koszty_operacyjne</td>
+            <td>0.0000</td>
+            <td>16159.3525</td>
+            <td>446220.4950</td>
+            <td>3079655.8333</td>
+            <td>2809444.5375</td>
+            <td>60320242.0800</td>
+            <td>6298149.7680</td>
+        </tr>
+        <tr>
+            <td>wsk_Zobowiazania_krotkoterminowe</td>
+            <td>-272257.6700</td>
+            <td>0.0000</td>
+            <td>39048.1150</td>
+            <td>1168712.3722</td>
+            <td>592296.3900</td>
+            <td>1117106000.0000</td>
+            <td>20513298.0412</td>
+        </tr>
+        <tr>
+            <td>wsk_Zobowiazania_dlugoterminowe</td>
+            <td>-225000.0000</td>
+            <td>0.0000</td>
+            <td>0.3000</td>
+            <td>1088401.0443</td>
+            <td>159938.2650</td>
+            <td>319451414.3300</td>
+            <td>8560313.0573</td>
+        </tr>
+        <tr>
+            <td>wsk_marza_brutto_1</td>
+            <td>-1787751.4468</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>-807.3769</td>
+            <td>0.0761</td>
+            <td>47672.9471</td>
+            <td>32946.2130</td>
+        </tr>
+        <tr>
+            <td>wsk_marza_brutto_2</td>
+            <td>-10890.0023</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>35.1963</td>
+            <td>0.0805</td>
+            <td>47672.9471</td>
+            <td>1166.9994</td>
+        </tr>
+        <tr>
+            <td>wsk_stopa_marzy_brutto</td>
+            <td>-4206.9064</td>
+            <td>-0.0020</td>
+            <td>0.0344</td>
+            <td>5.7590</td>
+            <td>0.3664</td>
+            <td>28085.8057</td>
+            <td>554.4957</td>
+        </tr>
+        <tr>
+            <td>wsk_rent_operacyjna</td>
+            <td>-41255478.0000</td>
+            <td>-0.0018</td>
+            <td>0.0320</td>
+            <td>-14054.8415</td>
+            <td>0.3229</td>
+            <td>28085.8057</td>
+            <td>753232.5394</td>
+        </tr>
+        <tr>
+            <td>wsk_ROS</td>
+            <td>-17443.8223</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>23.4403</td>
+            <td>0.0676</td>
+            <td>36150.7917</td>
+            <td>1043.2389</td>
+        </tr>
+        <tr>
+            <td>wsk_ROA</td>
+            <td>-2157.7602</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>-0.4714</td>
+            <td>0.0769</td>
+            <td>1034.3900</td>
+            <td>43.9274</td>
+        </tr>
+        <tr>
+            <td>wsk_s_ROA</td>
+            <td>-2157.7602</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>-0.4705</td>
+            <td>0.0809</td>
+            <td>1034.3900</td>
+            <td>43.9274</td>
+        </tr>
+        <tr>
+            <td>wsk_rent_operacyjna_aktywow</td>
+            <td>-2520.8958</td>
+            <td>-0.0004</td>
+            <td>0.0353</td>
+            <td>17.4308</td>
+            <td>0.2420</td>
+            <td>50873.6330</td>
+            <td>930.3022</td>
+        </tr>
+        <tr>
+            <td>wsk_ROE</td>
+            <td>-1223.6558</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>2.4879</td>
+            <td>0.1713</td>
+            <td>6430.0000</td>
+            <td>124.6792</td>
+        </tr>
+        <tr>
+            <td>wsk_s_ROE</td>
+            <td>-1223.6558</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>2.4878</td>
+            <td>0.1708</td>
+            <td>6430.0000</td>
+            <td>124.6792</td>
+        </tr>
+        <tr>
+            <td>wsk_mnoznik_kap_wl</td>
+            <td>0.0000</td>
+            <td>1.0733</td>
+            <td>1.4943</td>
+            <td>79.6847</td>
+            <td>2.7628</td>
+            <td>67298.5582</td>
+            <td>1642.0320</td>
+        </tr>
+        <tr>
+            <td>wsk_zwrot_aktywa_trwale</td>
+            <td>-43051.9105</td>
+            <td>0.0000</td>
+            <td>0.7787</td>
+            <td>2844.5651</td>
+            <td>281.0489</td>
+            <td>311685.8014</td>
+            <td>13085.9936</td>
+        </tr>
+        <tr>
+            <td>wsk_rent_kaptial_podstawowy</td>
+            <td>-4860.4893</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>45.8971</td>
+            <td>1.5104</td>
+            <td>89190.3200</td>
+            <td>1659.7218</td>
+        </tr>
+        <tr>
+            <td>wsk_akt_generowania_got_1</td>
+            <td>-175.4173</td>
+            <td>0.0000</td>
+            <td>0.0311</td>
+            <td>1.4874</td>
+            <td>0.1356</td>
+            <td>3324.4813</td>
+            <td>65.2588</td>
+        </tr>
+        <tr>
+            <td>wsk_akt_generowania_got_2</td>
+            <td>-0.7807</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0089</td>
+            <td>0.0821</td>
+            <td>0.3402</td>
+            <td>0.1743</td>
+        </tr>
+        <tr>
+            <td>wsk_rent_sprzedazy</td>
+            <td>-17443.8223</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>23.4403</td>
+            <td>0.0676</td>
+            <td>36150.7917</td>
+            <td>1043.2389</td>
+        </tr>
+        <tr>
+            <td>wsk_ebit</td>
+            <td>-9197103.2800</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>213523.3794</td>
+            <td>146932.1050</td>
+            <td>31170626.2400</td>
+            <td>939714.6961</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_1</td>
+            <td>-8230995.4300</td>
+            <td>0.0000</td>
+            <td>11675.5950</td>
+            <td>319657.8711</td>
+            <td>211870.5775</td>
+            <td>31170626.2400</td>
+            <td>1096701.3588</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_2</td>
+            <td>-8230995.4300</td>
+            <td>0.0000</td>
+            <td>14014.6700</td>
+            <td>346031.0535</td>
+            <td>224515.7475</td>
+            <td>31170626.2400</td>
+            <td>1158390.3483</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_3</td>
+            <td>-8234874.2500</td>
+            <td>0.0000</td>
+            <td>66369.5450</td>
+            <td>551088.5878</td>
+            <td>454535.5650</td>
+            <td>31168580.1400</td>
+            <td>1547160.3867</td>
+        </tr>
+        <tr>
+            <td>wsk_marza_ebitda_1</td>
+            <td>-8402.4318</td>
+            <td>0.0000</td>
+            <td>0.0246</td>
+            <td>63.4977</td>
+            <td>0.1408</td>
+            <td>70484.7478</td>
+            <td>1677.6538</td>
+        </tr>
+        <tr>
+            <td>wsk_marza_ebitda_2</td>
+            <td>-1787751.4468</td>
+            <td>0.0000</td>
+            <td>0.0259</td>
+            <td>-798.7083</td>
+            <td>0.1416</td>
+            <td>47672.9471</td>
+            <td>32938.0178</td>
+        </tr>
+        <tr>
+            <td>wsk_marza_ebitda_3</td>
+            <td>-8402.4318</td>
+            <td>0.0000</td>
+            <td>0.0735</td>
+            <td>8.1605</td>
+            <td>0.5286</td>
+            <td>28180.2886</td>
+            <td>618.2187</td>
+        </tr>
+        <tr>
+            <td>wsk_marza_ebit</td>
+            <td>-8402.4318</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>61.9815</td>
+            <td>0.0890</td>
+            <td>70484.7478</td>
+            <td>1678.3662</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_aktywa_1</td>
+            <td>-175.4173</td>
+            <td>0.0000</td>
+            <td>0.0271</td>
+            <td>1.9330</td>
+            <td>0.1407</td>
+            <td>4674.8468</td>
+            <td>88.6494</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_aktywa_2</td>
+            <td>-175.4173</td>
+            <td>0.0000</td>
+            <td>0.0288</td>
+            <td>2.3798</td>
+            <td>0.1543</td>
+            <td>4674.8468</td>
+            <td>97.5833</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_aktywa_3</td>
+            <td>-175.4173</td>
+            <td>0.0000</td>
+            <td>0.0811</td>
+            <td>20.2008</td>
+            <td>0.3095</td>
+            <td>51644.6973</td>
+            <td>946.4578</td>
+        </tr>
+        <tr>
+            <td>wsk_zwrot_aktywa_mat</td>
+            <td>-1966.8715</td>
+            <td>0.0000</td>
+            <td>0.0546</td>
+            <td>18.3529</td>
+            <td>0.2776</td>
+            <td>51644.6973</td>
+            <td>944.9989</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_zobowiazania</td>
+            <td>-4811.5729</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>18.1193</td>
+            <td>0.3463</td>
+            <td>21695.6027</td>
+            <td>471.4594</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_op_zobowiazania</td>
+            <td>-5940.2134</td>
+            <td>0.0000</td>
+            <td>0.2335</td>
+            <td>2606.4661</td>
+            <td>3.9193</td>
+            <td>246303.4053</td>
+            <td>11705.1031</td>
+        </tr>
+        <tr>
+            <td>wsk_sprzedaz_kap_obrotowy</td>
+            <td>-1243.4367</td>
+            <td>0.0000</td>
+            <td>1.4292</td>
+            <td>27.0353</td>
+            <td>4.4421</td>
+            <td>27491.4225</td>
+            <td>670.2197</td>
+        </tr>
+        <tr>
+            <td>wsk_koszty_przychody</td>
+            <td>-308.7782</td>
+            <td>0.8142</td>
+            <td>0.9777</td>
+            <td>67.9686</td>
+            <td>1.1129</td>
+            <td>37368.5192</td>
+            <td>1028.3820</td>
+        </tr>
+        <tr>
+            <td>wsk_rent_kapitalu</td>
+            <td>-737.5094</td>
+            <td>0.0000</td>
+            <td>0.9682</td>
+            <td>22.3886</td>
+            <td>5.7089</td>
+            <td>27491.4225</td>
+            <td>542.2288</td>
+        </tr>
+        <tr>
+            <td>wsk_stopa_zysku_sprzedaz</td>
+            <td>-37368.5192</td>
+            <td>-0.1208</td>
+            <td>0.0000</td>
+            <td>-67.2036</td>
+            <td>0.0688</td>
+            <td>309.7782</td>
+            <td>1028.4243</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycie_wyd_fin_gotowkowe_1</td>
+            <td>-1444383.0000</td>
+            <td>0.0000</td>
+            <td>9.4390</td>
+            <td>66423.6083</td>
+            <td>114.0157</td>
+            <td>60377811.5000</td>
+            <td>1567769.0252</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycie_wyd_fin_gotowkowe_2</td>
+            <td>-403955.8182</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>-13117.2274</td>
+            <td>13.4388</td>
+            <td>7986.7033</td>
+            <td>73833.0172</td>
+        </tr>
+        <tr>
+            <td>wsk_koszt_długu_1</td>
+            <td>-0.4406</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>42.9606</td>
+            <td>0.0384</td>
+            <td>54605.9706</td>
+            <td>1071.1660</td>
+        </tr>
+        <tr>
+            <td>wsk_koszt_długu_2</td>
+            <td>-0.4406</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>191.1024</td>
+            <td>0.0413</td>
+            <td>442217.4000</td>
+            <td>8143.7112</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycie_aktywow_tr_kapitalem_st</td>
+            <td>-0.2351</td>
+            <td>2.4587</td>
+            <td>14.0787</td>
+            <td>8817.9643</td>
+            <td>228.1791</td>
+            <td>13362510.0000</td>
+            <td>269947.0615</td>
+        </tr>
+        <tr>
+            <td>wsk_struktury_finansowania</td>
+            <td>-0.0164</td>
+            <td>1.0000</td>
+            <td>1.0002</td>
+            <td>37.1330</td>
+            <td>1.2075</td>
+            <td>104463.9969</td>
+            <td>1907.7030</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycie_zob_kr_gotowkowe_1</td>
+            <td>-5940.2134</td>
+            <td>0.0000</td>
+            <td>0.2502</td>
+            <td>97.7282</td>
+            <td>2.0894</td>
+            <td>76691.1167</td>
+            <td>1597.4699</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycie_zob_kr_gotowkowe_2</td>
+            <td>-131.2885</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>3.6837</td>
+            <td>0.2854</td>
+            <td>238.8790</td>
+            <td>50.4797</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_operacyjny_zob_1</td>
+            <td>-5940.2134</td>
+            <td>0.0000</td>
+            <td>0.2335</td>
+            <td>2606.4661</td>
+            <td>3.9193</td>
+            <td>246303.4053</td>
+            <td>11705.1031</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_operacyjny_zob_2</td>
+            <td>-2970.1067</td>
+            <td>0.0000</td>
+            <td>0.0773</td>
+            <td>30.5977</td>
+            <td>0.8126</td>
+            <td>51644.6973</td>
+            <td>984.4265</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenia_gotowki_1</td>
+            <td>-11725.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>248.9751</td>
+            <td>0.5364</td>
+            <td>407912.8570</td>
+            <td>8086.3150</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenia_gotowki_2</td>
+            <td>-4.0936</td>
+            <td>0.0000</td>
+            <td>0.5676</td>
+            <td>1240.2103</td>
+            <td>4.8168</td>
+            <td>14439.6013</td>
+            <td>3620.6399</td>
+        </tr>
+        <tr>
+            <td>wsk_koszty_fin_przychody</td>
+            <td>-52.3967</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>26.7852</td>
+            <td>0.0045</td>
+            <td>36714.8752</td>
+            <td>789.2978</td>
+        </tr>
+        <tr>
+            <td>wsk_koszty_odsetki_przychody</td>
+            <td>-52.3967</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>23.3969</td>
+            <td>0.0007</td>
+            <td>31182.7585</td>
+            <td>696.6808</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenie_gotowka</td>
+            <td>-52.3967</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>23.3969</td>
+            <td>0.0007</td>
+            <td>31182.7585</td>
+            <td>696.6808</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_kap_wlasnego_aktywa_1</td>
+            <td>0.0000</td>
+            <td>0.3431</td>
+            <td>0.6512</td>
+            <td>24.7615</td>
+            <td>0.9191</td>
+            <td>70514.9787</td>
+            <td>1287.6891</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_kap_wlasnego_aktywa_2</td>
+            <td>-0.2656</td>
+            <td>0.2709</td>
+            <td>0.5632</td>
+            <td>25.5121</td>
+            <td>0.8906</td>
+            <td>72672.7389</td>
+            <td>1327.0789</td>
+        </tr>
+        <tr>
+            <td>wsk_ogolnego_zadluzenia_1</td>
+            <td>-0.0605</td>
+            <td>0.0618</td>
+            <td>0.3176</td>
+            <td>8.2698</td>
+            <td>0.6160</td>
+            <td>22889.8982</td>
+            <td>418.1456</td>
+        </tr>
+        <tr>
+            <td>wsk_ogolnego_zadluzenia_2</td>
+            <td>-70514.9787</td>
+            <td>0.0683</td>
+            <td>0.3320</td>
+            <td>-23.7785</td>
+            <td>0.6382</td>
+            <td>1.0000</td>
+            <td>1287.7075</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycie_aktywow_kap_stalym</td>
+            <td>0.0000</td>
+            <td>1.1574</td>
+            <td>6.8078</td>
+            <td>3703.3291</td>
+            <td>112.6840</td>
+            <td>6061088.0000</td>
+            <td>118121.0049</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenie_kap_wlasnego</td>
+            <td>-0.0571</td>
+            <td>0.0659</td>
+            <td>0.4653</td>
+            <td>7.9775</td>
+            <td>1.6042</td>
+            <td>2353.0378</td>
+            <td>88.7623</td>
+        </tr>
+        <tr>
+            <td>wsk_ogolnego_zadluzenia_pozyczki</td>
+            <td>-0.0709</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>1.3177</td>
+            <td>0.1848</td>
+            <td>633.9695</td>
+            <td>17.8363</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenia_pozyczki_dlugie</td>
+            <td>-0.0709</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.7962</td>
+            <td>0.0000</td>
+            <td>633.9695</td>
+            <td>13.0230</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenia_dlugie</td>
+            <td>-0.0709</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.7486</td>
+            <td>0.0000</td>
+            <td>694.2370</td>
+            <td>14.7932</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenia_krotkie</td>
+            <td>-0.0061</td>
+            <td>0.0000</td>
+            <td>0.1192</td>
+            <td>3.6956</td>
+            <td>0.7504</td>
+            <td>2353.0378</td>
+            <td>57.3481</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycia_zobowiazan_rz_aktywami_trwalymi</td>
+            <td>-109097614649736560.0000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>-5114088149459.4854</td>
+            <td>4.1229</td>
+            <td>69958631838061688.0000</td>
+            <td>2539156507666761.0000</td>
+        </tr>
+        <tr>
+            <td>wsk_ROE_brutto</td>
+            <td>-1223.6458</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>3.3375</td>
+            <td>0.1966</td>
+            <td>7940.0000</td>
+            <td>153.5910</td>
+        </tr>
+        <tr>
+            <td>wsk_ROA_operacyjny</td>
+            <td>-2157.7602</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>-0.3730</td>
+            <td>0.0959</td>
+            <td>1289.8100</td>
+            <td>46.1265</td>
+        </tr>
+        <tr>
+            <td>wsk_efekt_dzwigni_fin_1</td>
+            <td>-158.2616</td>
+            <td>0.0000</td>
+            <td>1.1243</td>
+            <td>48.3173</td>
+            <td>1.8966</td>
+            <td>67298.5582</td>
+            <td>1315.5926</td>
+        </tr>
+        <tr>
+            <td>wsk_efekt_dzwigni_fin_2</td>
+            <td>-3513.1927</td>
+            <td>0.0000</td>
+            <td>0.7477</td>
+            <td>19.9676</td>
+            <td>0.9364</td>
+            <td>36150.7917</td>
+            <td>687.2628</td>
+        </tr>
+        <tr>
+            <td>wsk_pokrycia_odsetek_zyskiem</td>
+            <td>-6964022.5000</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>46550.8986</td>
+            <td>90.6622</td>
+            <td>48464912.5000</td>
+            <td>1041722.3433</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_koszty_odsetkowe_1</td>
+            <td>-6848922.5000</td>
+            <td>0.0000</td>
+            <td>10.9520</td>
+            <td>70178.0546</td>
+            <td>252.8739</td>
+            <td>60377812.5000</td>
+            <td>1545045.6052</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_koszty_odsetkowe_2</td>
+            <td>-6848922.5000</td>
+            <td>0.0000</td>
+            <td>12.5064</td>
+            <td>80459.6747</td>
+            <td>281.3426</td>
+            <td>86210232.5000</td>
+            <td>1913345.6247</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_koszty_odsetkowe_3</td>
+            <td>-8851467.0000</td>
+            <td>0.0000</td>
+            <td>35.9365</td>
+            <td>64039.0941</td>
+            <td>1527.9812</td>
+            <td>59973265.0000</td>
+            <td>1508342.7822</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_koszty_finansowe_1</td>
+            <td>-1444382.0000</td>
+            <td>0.0000</td>
+            <td>6.0012</td>
+            <td>66416.8111</td>
+            <td>92.9924</td>
+            <td>60377812.5000</td>
+            <td>1567769.4567</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_koszty_finansowe_2</td>
+            <td>-1444382.0000</td>
+            <td>0.0000</td>
+            <td>6.6784</td>
+            <td>75709.9328</td>
+            <td>100.3088</td>
+            <td>86210232.5000</td>
+            <td>1929729.3831</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_koszty_finansowe_3</td>
+            <td>-8851467.0000</td>
+            <td>0.0000</td>
+            <td>16.6415</td>
+            <td>62051.7396</td>
+            <td>572.9437</td>
+            <td>59973265.0000</td>
+            <td>1531876.4666</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_zobowiazan_odsetki_1</td>
+            <td>-6848922.5000</td>
+            <td>0.0000</td>
+            <td>10.9520</td>
+            <td>70178.0546</td>
+            <td>252.8739</td>
+            <td>60377812.5000</td>
+            <td>1545045.6052</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_zobowiazan_odsetki_2</td>
+            <td>-6848922.5000</td>
+            <td>0.0000</td>
+            <td>12.5064</td>
+            <td>80459.6747</td>
+            <td>281.3426</td>
+            <td>86210232.5000</td>
+            <td>1913345.6247</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_zobowiazan_odsetki_3</td>
+            <td>-82348.7425</td>
+            <td>0.0000</td>
+            <td>1.4429</td>
+            <td>2795.9682</td>
+            <td>598.4273</td>
+            <td>788864.5913</td>
+            <td>17639.2596</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_zobowiazan_odsetki_4</td>
+            <td>-82348.7425</td>
+            <td>0.0000</td>
+            <td>1.5482</td>
+            <td>33526.2090</td>
+            <td>683.1107</td>
+            <td>91944696.2000</td>
+            <td>1678713.7263</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_zobowiazan_1</td>
+            <td>-5940.2134</td>
+            <td>0.0000</td>
+            <td>0.0676</td>
+            <td>5.2585</td>
+            <td>0.4443</td>
+            <td>7940.0000</td>
+            <td>203.3057</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_zobowiazan_2</td>
+            <td>-5940.2134</td>
+            <td>0.0000</td>
+            <td>0.0743</td>
+            <td>8.6598</td>
+            <td>0.5021</td>
+            <td>7940.0000</td>
+            <td>228.4136</td>
+        </tr>
+        <tr>
+            <td>wsk_ebitda_zobowiazan_3</td>
+            <td>-5940.2134</td>
+            <td>0.0000</td>
+            <td>0.2077</td>
+            <td>29.3466</td>
+            <td>1.4673</td>
+            <td>51644.6973</td>
+            <td>989.3223</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_aktywow_1</td>
+            <td>-24.7621</td>
+            <td>0.0100</td>
+            <td>1.0416</td>
+            <td>28.5732</td>
+            <td>3.0483</td>
+            <td>40413.1525</td>
+            <td>894.4097</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_aktywow_2</td>
+            <td>-0.7624</td>
+            <td>0.0115</td>
+            <td>0.8147</td>
+            <td>101.8948</td>
+            <td>2.0444</td>
+            <td>273598.5619</td>
+            <td>5020.1608</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_rz_aktywow_trwalych</td>
+            <td>-5.9051</td>
+            <td>0.0835</td>
+            <td>20.3257</td>
+            <td>4150.0988</td>
+            <td>1235.0317</td>
+            <td>290434.7261</td>
+            <td>15648.6178</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_wartosci_niewaterialnych</td>
+            <td>-38625925.2500</td>
+            <td>4.9500</td>
+            <td>2009.4650</td>
+            <td>133018.4962</td>
+            <td>17611.1469</td>
+            <td>169188084.1111</td>
+            <td>4249258.1539</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_zapasow</td>
+            <td>-58.1893</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>20939.5718</td>
+            <td>18.0198</td>
+            <td>34817400.8000</td>
+            <td>667636.7711</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_naleznosci</td>
+            <td>-382308.6422</td>
+            <td>14.9706</td>
+            <td>59.5705</td>
+            <td>1763502.5729</td>
+            <td>201.0538</td>
+            <td>4863953640.0000</td>
+            <td>88866461.1968</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_naleznosci_dostaw_uslug</td>
+            <td>-3331.0083</td>
+            <td>0.0000</td>
+            <td>5.1764</td>
+            <td>17398.0717</td>
+            <td>55.2564</td>
+            <td>10934454.1852</td>
+            <td>290101.1238</td>
+        </tr>
+        <tr>
+            <td>wsk_cykl_operacyjny</td>
+            <td>-382308.6422</td>
+            <td>28.6408</td>
+            <td>89.4515</td>
+            <td>1784442.1447</td>
+            <td>283.6722</td>
+            <td>4863953640.0000</td>
+            <td>88870195.9100</td>
+        </tr>
+        <tr>
+            <td>wsk_poziom_kosztow_operacyjnych</td>
+            <td>-308.7782</td>
+            <td>0.8142</td>
+            <td>0.9777</td>
+            <td>67.9686</td>
+            <td>1.1129</td>
+            <td>37368.5192</td>
+            <td>1028.3820</td>
+        </tr>
+        <tr>
+            <td>wsk_poziom_kosztow_finansowych</td>
+            <td>-52.3967</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>26.7852</td>
+            <td>0.0045</td>
+            <td>36714.8752</td>
+            <td>789.2978</td>
+        </tr>
+        <tr>
+            <td>wsk_obrotowsci_naleznosci</td>
+            <td>-1.2647</td>
+            <td>0.0896</td>
+            <td>3.7837</td>
+            <td>949.4483</td>
+            <td>10.2188</td>
+            <td>2068400.0000</td>
+            <td>37893.4776</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_zobowiazan</td>
+            <td>-115614.7401</td>
+            <td>0.0000</td>
+            <td>36.6080</td>
+            <td>1515386.2637</td>
+            <td>111.6848</td>
+            <td>4066265840.0000</td>
+            <td>74336212.8740</td>
+        </tr>
+        <tr>
+            <td>wsk_rotacja_zobowiazan_dostaw_uslug</td>
+            <td>-3951.9043</td>
+            <td>0.0000</td>
+            <td>5.4983</td>
+            <td>35168.4468</td>
+            <td>36.0644</td>
+            <td>42825287.9600</td>
+            <td>831670.4612</td>
+        </tr>
+        <tr>
+            <td>wsk_cykl_konwersji_gotowki</td>
+            <td>-382308.6422</td>
+            <td>61.3049</td>
+            <td>161.5580</td>
+            <td>3299828.4084</td>
+            <td>505.9598</td>
+            <td>8930219480.0000</td>
+            <td>163125781.5602</td>
+        </tr>
+        <tr>
+            <td>wsk_plynnosc_biez_1</td>
+            <td>-28.1518</td>
+            <td>1.6500</td>
+            <td>5.0452</td>
+            <td>inf</td>
+            <td>nan</td>
+            <td>inf</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>wsk_plynnosc_biez_2</td>
+            <td>-28.1518</td>
+            <td>1.4947</td>
+            <td>4.4871</td>
+            <td>1637.1609</td>
+            <td>96.2692</td>
+            <td>500000.0000</td>
+            <td>13621.1473</td>
+        </tr>
+        <tr>
+            <td>wsk_plynnosc_biez_3</td>
+            <td>-28.7446</td>
+            <td>1.3997</td>
+            <td>4.1660</td>
+            <td>1589.0154</td>
+            <td>93.2929</td>
+            <td>500000.0000</td>
+            <td>13381.6485</td>
+        </tr>
+        <tr>
+            <td>wsk_plynnosc_szybka_1</td>
+            <td>-2752.1120</td>
+            <td>1.1335</td>
+            <td>3.8511</td>
+            <td>1448.0011</td>
+            <td>92.5969</td>
+            <td>500000.0000</td>
+            <td>13248.8616</td>
+        </tr>
+        <tr>
+            <td>wsk_plynnosc_szybka_2</td>
+            <td>-48.9748</td>
+            <td>1.9664</td>
+            <td>6.5155</td>
+            <td>1753.1942</td>
+            <td>119.9859</td>
+            <td>500000.0000</td>
+            <td>14447.4233</td>
+        </tr>
+        <tr>
+            <td>wsk_plynnosc_gotowkowa_1</td>
+            <td>-20.8231</td>
+            <td>0.0000</td>
+            <td>0.2621</td>
+            <td>116.0334</td>
+            <td>1.8295</td>
+            <td>98723.5217</td>
+            <td>2509.3329</td>
+        </tr>
+        <tr>
+            <td>wsk_poziom_kapitalu_obrotowego_netto</td>
+            <td>-15046539.2700</td>
+            <td>13304.4150</td>
+            <td>148431.8000</td>
+            <td>964290.7006</td>
+            <td>745775.2050</td>
+            <td>219145000.0000</td>
+            <td>5522260.9531</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_kapitalu_obrotowego_netto</td>
+            <td>-11830.7782</td>
+            <td>0.1436</td>
+            <td>0.5439</td>
+            <td>-2.6059</td>
+            <td>0.9186</td>
+            <td>1389.3717</td>
+            <td>218.3904</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_zob_biez_sprzedaz_1</td>
+            <td>-316.7527</td>
+            <td>0.0000</td>
+            <td>0.1004</td>
+            <td>4163.6808</td>
+            <td>0.3062</td>
+            <td>11171060.0000</td>
+            <td>204220.3338</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_zob_biez_sprzedaz_2</td>
+            <td>-2191450.0000</td>
+            <td>-2.7256</td>
+            <td>-0.4109</td>
+            <td>-1377.6095</td>
+            <td>-0.1198</td>
+            <td>106292.6336</td>
+            <td>41830.3542</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_zob_biez_aktywa_1</td>
+            <td>-0.0057</td>
+            <td>0.0000</td>
+            <td>0.0925</td>
+            <td>4.1682</td>
+            <td>0.3768</td>
+            <td>11830.7782</td>
+            <td>215.9957</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_zob_biez_aktywa_2</td>
+            <td>-47.2000</td>
+            <td>-0.1161</td>
+            <td>0.0000</td>
+            <td>0.2414</td>
+            <td>0.1491</td>
+            <td>781.6815</td>
+            <td>14.3061</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_zapasy_zobowiazania</td>
+            <td>-0.0508</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>188.3302</td>
+            <td>0.3322</td>
+            <td>66610.4737</td>
+            <td>2278.7120</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_zapasy_kap_obrotowy</td>
+            <td>-74.7981</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>2.3764</td>
+            <td>0.1144</td>
+            <td>2752.1120</td>
+            <td>67.6889</td>
+        </tr>
+        <tr>
+            <td>wsk_udzial_kap_obrotowego_w_fin</td>
+            <td>-12608.1480</td>
+            <td>0.5122</td>
+            <td>1.1487</td>
+            <td>792.6107</td>
+            <td>3.7251</td>
+            <td>1380526.2500</td>
+            <td>26214.2741</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_ebitda_1</td>
+            <td>-132.1346</td>
+            <td>0.0000</td>
+            <td>0.5171</td>
+            <td>1.0914</td>
+            <td>0.8816</td>
+            <td>1674.2946</td>
+            <td>32.3664</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_ebitda_2</td>
+            <td>-132.1346</td>
+            <td>0.0000</td>
+            <td>0.4531</td>
+            <td>1.0946</td>
+            <td>0.8491</td>
+            <td>1674.2946</td>
+            <td>32.3596</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_ebitda_3</td>
+            <td>-1223.6558</td>
+            <td>0.0000</td>
+            <td>0.4812</td>
+            <td>20.4187</td>
+            <td>0.8859</td>
+            <td>36150.7917</td>
+            <td>683.1053</td>
+        </tr>
+        <tr>
+            <td>wsk_zysk_CF_operacyjny</td>
+            <td>-23.8918</td>
+            <td>0.0000</td>
+            <td>0.7110</td>
+            <td>801.5718</td>
+            <td>143.2521</td>
+            <td>10128.2995</td>
+            <td>2379.8184</td>
+        </tr>
+        <tr>
+            <td>wsk_obrotowosc_gotowkowa</td>
+            <td>-34687.6767</td>
+            <td>0.1246</td>
+            <td>6.7811</td>
+            <td>2296.3553</td>
+            <td>90.0996</td>
+            <td>338912.2344</td>
+            <td>11650.2768</td>
+        </tr>
+        <tr>
+            <td>wsk_struktura_majatku</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>0.0547</td>
+            <td>67.2666</td>
+            <td>0.6680</td>
+            <td>62877.2713</td>
+            <td>1410.9556</td>
+        </tr>
+        <tr>
+            <td>wsk_struktury_kapitalu</td>
+            <td>-82.3168</td>
+            <td>0.5217</td>
+            <td>1.8420</td>
+            <td>555.8281</td>
+            <td>10.6570</td>
+            <td>517583.4157</td>
+            <td>13521.9945</td>
+        </tr>
+        <tr>
+            <td>wsk_zast_kapitalu_wlasnego</td>
+            <td>0.0000</td>
+            <td>1.1574</td>
+            <td>6.8078</td>
+            <td>3703.9652</td>
+            <td>112.6840</td>
+            <td>6061088.0000</td>
+            <td>118121.0159</td>
+        </tr>
+        <tr>
+            <td>wsk_zast_kapitalu_podstawowego</td>
+            <td>-0.4007</td>
+            <td>0.1328</td>
+            <td>1.1812</td>
+            <td>721.9835</td>
+            <td>50.0000</td>
+            <td>500000.0000</td>
+            <td>15914.7652</td>
+        </tr>
+        <tr>
+            <td>wsk_zast_kapitalu_stalego</td>
+            <td>-1.0477</td>
+            <td>1.4776</td>
+            <td>8.1897</td>
+            <td>4119.4295</td>
+            <td>140.7571</td>
+            <td>6061088.0000</td>
+            <td>118382.5042</td>
+        </tr>
+        <tr>
+            <td>wsk_zast_kapitalu_obcego</td>
+            <td>-0.1236</td>
+            <td>0.0954</td>
+            <td>0.4453</td>
+            <td>66.0698</td>
+            <td>0.8742</td>
+            <td>52576.7965</td>
+            <td>1409.5497</td>
+        </tr>
+        <tr>
+            <td>wsk_sytuacji_fin</td>
+            <td>-16.8156</td>
+            <td>0.0590</td>
+            <td>1.2277</td>
+            <td>68451.9781</td>
+            <td>16.2266</td>
+            <td>202619577.4738</td>
+            <td>3699322.2398</td>
+        </tr>
+        <tr>
+            <td>wsk_struktura_kap_wlasnego_1</td>
+            <td>0.0000</td>
+            <td>0.3431</td>
+            <td>0.6512</td>
+            <td>24.7615</td>
+            <td>0.9191</td>
+            <td>70514.9787</td>
+            <td>1287.6891</td>
+        </tr>
+        <tr>
+            <td>wsk_struktura_kap_wlasnego_2</td>
+            <td>0.0000</td>
+            <td>0.3431</td>
+            <td>0.6512</td>
+            <td>24.7615</td>
+            <td>0.9191</td>
+            <td>70514.9787</td>
+            <td>1287.6891</td>
+        </tr>
+        <tr>
+            <td>wsk_struktura_kap_wlasnego_s_1</td>
+            <td>-116.6948</td>
+            <td>0.3362</td>
+            <td>0.6480</td>
+            <td>24.7136</td>
+            <td>0.9185</td>
+            <td>70514.9787</td>
+            <td>1287.6917</td>
+        </tr>
+        <tr>
+            <td>wsk_struktura_kap_wlasnego_s_2</td>
+            <td>-22132105023620128.0000</td>
+            <td>0.4060</td>
+            <td>0.8042</td>
+            <td>inf</td>
+            <td>1.0584</td>
+            <td>inf</td>
+            <td>nan</td>
+        </tr>
+        <tr>
+            <td>wsk_zadluzenia</td>
+            <td>-0.0571</td>
+            <td>0.0659</td>
+            <td>0.4653</td>
+            <td>7.9772</td>
+            <td>1.6042</td>
+            <td>2353.0378</td>
+            <td>88.7623</td>
+        </tr>
+        <tr>
+            <td>wsk_zob_dlugoterminowe_aktywa_rzeczowe</td>
+            <td>-0.5464</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>4.1055</td>
+            <td>0.2014</td>
+            <td>11059.1200</td>
+            <td>202.4137</td>
+        </tr>
+        <tr>
+            <td>wsk_zob_oprocentowanych</td>
+            <td>-0.0466</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>3.7794</td>
+            <td>0.1006</td>
+            <td>11059.1200</td>
+            <td>201.9094</td>
+        </tr>
+        <tr>
+            <td>wsk_zob_oprocentowanych_aktywa_rzeczowe</td>
+            <td>-0.0466</td>
+            <td>0.0000</td>
+            <td>0.0000</td>
+            <td>3.7851</td>
+            <td>0.1057</td>
+            <td>11059.1200</td>
+            <td>201.9093</td>
+        </tr>
+        <tr>
+            <td>wsk_struktura_kap_obcego_s</td>
+            <td>-2.6654</td>
+            <td>0.0619</td>
+            <td>0.3208</td>
+            <td>8.2838</td>
+            <td>0.6273</td>
+            <td>22889.8982</td>
+            <td>418.1454</td>
+        </tr>
+        <tr>
+            <td>wsk_zob_s_aktywa_rzeczowe</td>
+            <td>-47.2000</td>
+            <td>-0.0755</td>
+            <td>0.1182</td>
+            <td>4.3547</td>
+            <td>0.5054</td>
+            <td>11840.8015</td>
+            <td>216.6543</td>
+        </tr>
+        <tr>
+            <td>wsk_fin_majatku_kapitalem</td>
+            <td>-41254.0874</td>
+            <td>0.0878</td>
+            <td>0.5241</td>
+            <td>0.8071</td>
+            <td>0.8813</td>
+            <td>70514.9787</td>
+            <td>1561.1777</td>
+        </tr>
+
+    </table>
+    
+    <h2>📝 Podsumowanie Kolumn Kategorycznych</h2>
+
+    <div class="summary">
+        <h3>schemat_wsk_bilans</h3>
+        <p><strong>Liczba unikalnych wartości:</strong> 3</p>
+        <table>
+            <tr>
+                <th>Wartość</th>
+                <th>Liczba</th>
+                <th>Procent</th>
+            </tr>
+            <tr><td>SFJIN</td><td>1574</td><td>52.47%</td></tr>
+            <tr><td>SFJMI</td><td>794</td><td>26.47%</td></tr>
+            <tr><td>SFJMA</td><td>632</td><td>21.07%</td></tr>
+
+        </table>
+    </div>
+
+    <div class="summary">
+        <h3>schemat_wsk_rzis</h3>
+        <p><strong>Liczba unikalnych wartości:</strong> 3</p>
+        <table>
+            <tr>
+                <th>Wartość</th>
+                <th>Liczba</th>
+                <th>Procent</th>
+            </tr>
+            <tr><td>SFJIN</td><td>1608</td><td>53.60%</td></tr>
+            <tr><td>SFJMI</td><td>783</td><td>26.10%</td></tr>
+            <tr><td>SFJMA</td><td>609</td><td>20.30%</td></tr>
+
+        </table>
+    </div>
+
+</body>
+</html>
