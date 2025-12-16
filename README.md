@@ -47,20 +47,6 @@ Wymagane biblioteki w pliku `requirements.txt`.
     ```bash
     pip install -r requirements.txt
     ```
-
-## Uruchomienie
-
-Projekt jest w formie notatników Jupyter (`.ipynb`). Aby je uruchomić:
-
-1.  Uruchom Jupyter Notebook lub JupyterLab:
-    ```bash
-    jupyter notebook
-    ```
-2.  W przeglądarce otwórz wybrany plik (`finalInterpretowalny.ipynb` lub `finalBlackBox.ipynb`).
-3.  Wykonuj komórki z kodem po kolei (Shift + Enter).
-
-**Uwaga:** Notatniki mogą wymagać dostępu do pliku z danymi (`zbior_10.csv`). Upewnij się, że plik ten znajduje się w tym samym katalogu co notatniki lub zaktualizuj ścieżkę w kodzie.
-
 ## Autorzy
 
 Aleksander Brandt/Wojciech Baraniak
