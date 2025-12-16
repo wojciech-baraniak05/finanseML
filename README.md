@@ -32,7 +32,7 @@ Projekt składa się z dwóch głównych notatników Jupyter:
 
 ## Wymagania
 
-Aby uruchomić projekt, potrzebujesz zainstalowanych następujących bibliotek Pythona. Możesz je zainstalować używając pliku `requirements.txt`.
+Wymagane biblioteki w pliku `requirements.txt`.
 
 ### Instalacja
 
@@ -63,4 +63,4 @@ Projekt jest w formie notatników Jupyter (`.ipynb`). Aby je uruchomić:
 
 ## Autorzy
 
-[Aleksander Brandt/Wojciech Baraniak]
+Aleksander Brandt/Wojciech Baraniak
